@@ -1,4 +1,11 @@
-# guayadeque-mergels.py
+
+# Basic info
+
+A collection of scripts dedicated to Guayadeque Music Player
+
+---
+
+## guayadeque-mergels.py
 
 A small script to merge guayadeque `lyrics_sources.xml` without overwriting custom lyrics sources.
 
@@ -22,3 +29,41 @@ cp merged_lyrics_sources.xml ~/.guayadeque/lyrics_sources.xml
 ```
 
 ---
+
+## Lyrics scraping scripts 
+
+All scripts below can be added as GMP lyrics sources with ``{al} {tl}`` command line options.
+
+---
+
+### Installation
+
+```bash
+
+```
+
+---
+
+### ``musixmatch.com.sh``
+
+Grabs lyrics from https://www.musixmatch.com
+
+### ``genius.com.sh``
+
+Grabs lyrics from https://www.genius.com
+
+*Note* that genius.com search engine can give wrong search results so it is recommended to use the script with lowest priority possible.
+
+In order to use the script you need to setup genius.com account, register a new API client (via https://genius.com/api-clients), Generate Access Token and save it to ``genius.com.sh.token`` file.
+
+---
+
+### ``pesni.guru.sh``
+
+Grabs lyrics from https://www.pesni.guru
+
+---
+
+### ``tekst-pesni.online.sh``
+
+Grabs lyrics from https://www.tekst-pesni.online
