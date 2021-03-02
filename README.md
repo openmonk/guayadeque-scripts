@@ -39,7 +39,10 @@ All scripts below can be added as GMP lyrics sources with ``{al} {tl}`` command 
 ### Installation
 
 ```bash
-
+wget https://github.com/openmonk/guayadeque-scripts/archive/main.zip
+unzip main.zip
+cd guayadeque-scripts-main/
+ls *.sh | grep -v lyrics-search.sh | xargs -I__ echo '<lyricsource type="command" enabled="true" name="__" source="'`pwd`'/__ {al} {tl}"/>' | xargs -d'\n' | sed 's/[.[\*^$\/"]/\\&/g' | xargs -d'\n' -I__ sed -i.backup 's/<\/lyricsources>/__<\/lyricsources>/g' ~/.guayadeque/lyrics_sources.xml
 ```
 
 ---
@@ -52,7 +55,7 @@ Grabs lyrics from https://www.musixmatch.com
 
 Grabs lyrics from https://www.genius.com
 
-*Note* that genius.com search engine can give wrong search results so it is recommended to use the script with lowest priority possible.
+*Note that genius.com search engine can give wrong search results so it is recommended to use the script with lowest priority possible*
 
 In order to use the script you need to setup genius.com account, register a new API client (via https://genius.com/api-clients), Generate Access Token and save it to ``genius.com.sh.token`` file.
 
