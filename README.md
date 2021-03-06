@@ -70,3 +70,5 @@ Grabs lyrics from https://www.pesni.guru
 ### ``tekst-pesni.online.sh``
 
 Grabs lyrics from https://www.tekst-pesni.online
+
+*Note that tekst-pesni.online search engine can give wrong search results so it is recommended to use the script with lowest priority possible*
